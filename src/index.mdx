@@ -4,6 +4,7 @@ name: '@nju33/react-flex'
 ---
 
 import {Playground, PropsTable} from 'docz'
+import styled from 'styled-components';
 import Flex from '.';
 
 ## Examples
@@ -18,6 +19,31 @@ import Flex from '.';
 
 <Playground>
   <Flex className="inline">foo</Flex>
+</Playground>
+
+### flex-item
+
+<Playground>
+  <Flex>
+    <Flex item>foo</Flex>
+    <Flex item={1}>foo</Flex>
+    <Flex item={0}>foo</Flex>
+  </Flex>
+</Playground>
+
+<Playground>
+  {() => {
+    const UlFlex = Flex.withComponent('ul');
+    const LiFlex = Flex.withComponent('li');
+
+    return (
+      <UlFlex>
+        <LiFlex item with-flex className="space-between"><div>bar</div><div>bar</div></LiFlex>
+        <LiFlex item={1} with-flex><div>bar</div><div>bar</div></LiFlex>
+        <LiFlex item={0} with-flex className="inline"><div>bar</div><div>bar</div></LiFlex>
+      </UlFlex>
+    )
+  }}
 </Playground>
 
 ### centering

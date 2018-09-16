@@ -1,15 +1,44 @@
 import styled from 'styled-components';
 
 export const Flex = styled.div`
-  &:not(.inline) {
-    display: flex;
-  }
+  ${(attrs: any) => {
+    let css = '';
 
-  &.inline {
-    display: inline-flex;
-  }
+    if (attrs.item) {
+      let value = attrs.item;
+      if (['string', 'number'].indexOf(typeof value) === -1) {
+        value = 1;
+      }
 
-  &[aria-orientation="vertical"],
+      css += `flex: ${value}`;
+
+      if (attrs['with-flex']) {
+        css += `
+          &:not(.inline) {
+            display: flex;
+          }
+
+          &.inline {
+            display: inline-flex;
+          }
+        `;
+      }
+
+      return css;
+    }
+
+    return `
+      &:not(.inline) {
+        display: flex;
+      }
+
+      &.inline {
+        display: inline-flex;
+      }
+    `;
+  }};
+
+  &[aria-orientation='vertical'],
   &.column {
     flex-direction: column;
   }
