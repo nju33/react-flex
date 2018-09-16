@@ -1,0 +1,81 @@
+---
+route: /
+name: '@nju33/react-flex'
+---
+
+import {Playground, PropsTable} from 'docz'
+import Flex from '.';
+
+## Examples
+
+### `display:flex`
+
+<Playground>
+  <Flex>foo</Flex>
+</Playground>
+
+### `display:inline-flex`
+
+<Playground>
+  <Flex className="inline">foo</Flex>
+</Playground>
+
+### centering
+
+<Playground>
+  <Flex className="center" style={{height: 100, background: '#e8e8e8'}}>foo</Flex>
+  <Flex className="x-center" style={{height: 100, background: '#ccc'}}>foo</Flex>
+  <Flex className="y-center" style={{height: 100, background: '#e8e8e8'}}>foo</Flex>
+</Playground>
+
+### `flex-wrap:wrap`
+
+<Playground>
+  <Flex className="wrap">
+    <div style={{width: 200, height: 20}}>foo</div>
+    <div style={{width: 300, height: 20}}>foo</div>
+    <div style={{width: 500, height: 20}}>foo</div>
+  </Flex>
+</Playground>
+
+### `justify-content: *`
+
+<Playground>
+  <Flex className="start">
+    <span>foo</span>
+    <span>bar</span>
+  </Flex>
+  <Flex className="end">
+    <span>foo</span>
+    <span>bar</span>
+  </Flex>
+  <Flex className="space-around">
+    <span>foo</span>
+    <span>bar</span>
+  </Flex>
+  <Flex className="space-between">
+    <span>foo</span>
+    <span>bar</span>
+  </Flex>
+</Playground>
+
+### `flex-direction: *`
+
+<Playground>
+  <Flex aria-orientation="vertical">
+    <span>foo</span>
+    <span>bar</span>
+  </Flex>
+  <Flex className="column">
+    <span>foo</span>
+    <span>bar</span>
+  </Flex>
+  <Flex className="column-reverse">
+    <span>foo</span>
+    <span>bar</span>
+  </Flex>
+  <Flex className="row-reverse">
+    <span>foo</span>
+    <span>bar</span>
+  </Flex>
+</Playground>

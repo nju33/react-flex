@@ -1,0 +1,43 @@
+{
+  "name": "@nju33/react-flex",
+  "version": "0.1.38",
+  "description": "A flex element by styled-components",
+  "main": "dist/main/index.js",
+  "types": "dist/types/index.d.ts",
+  "module": "dist/module/index.js",
+  "source": "src/index.ts",
+  "keywords": [
+    "flex"
+  ],
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": ":",
+    "doc.dev": "docz dev --port 4857",
+    "build.main": "tsc -P tsconfig.main.json",
+    "build.module": "tsc -P tsconfig.module.json",
+    "build.types": "tsc -P tsconfig.types.json --emitDeclarationOnly",
+    "build.docs": "yarn docz build -d docs --base /react-flex/",
+    "build": "yarn build.main && yarn build.module && yarn build.types"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": "nju33/react-flex",
+  "devDependencies": {
+    "@geekcojp/prettier-config": "^0.2.2",
+    "@geekcojp/tslint-config": "^0.2.1",
+    "@types/react": "^16.4.14",
+    "@types/styled-components": "^3.0.1",
+    "docz": "^0.11.2",
+    "prettier": "^1.14.2",
+    "react": "^16.5.1",
+    "styled-components": "^3.4.6",
+    "tslint": "^5.11.0",
+    "typescript": "^3.0.3"
+  },
+  "peerDependencies": {
+    "styled-components": "^3.4.6"
+  }
+}
