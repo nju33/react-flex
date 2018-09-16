@@ -1,6 +1,6 @@
 {
   "name": "@nju33/react-flex",
-  "version": "0.1.38",
+  "version": "1.0.0",
   "description": "A flex element by styled-components",
   "main": "dist/main/index.js",
   "types": "dist/types/index.d.ts",
